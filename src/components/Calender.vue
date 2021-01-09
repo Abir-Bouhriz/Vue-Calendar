@@ -2,7 +2,7 @@
   <v-row class="fill-height">
     <v-col>
       <v-sheet height="64">
-        <v-toolbar flat color="white">
+        <v-toolbar flat >
           <v-btn outlined class="mr-4" @click="setToday">
             Today
           </v-btn>
@@ -53,9 +53,11 @@
               <v-text-field v-model="start" type="date" label="start (required)"></v-text-field>
               <v-text-field v-model="end" type="date" label="end (required)"></v-text-field>
               <v-text-field v-model="color" type="color" label="color (click to open color menu)"></v-text-field>
+              <div class="mybtn-right"  style="text-align: right;">
               <v-btn type="submit" color="primary" class="mr-4" @click.stop="dialog = false">
                 create event
               </v-btn>
+              </div>
             </v-form>
           </v-container>
         </v-card>
@@ -70,9 +72,11 @@
               <v-text-field v-model="start" type="date" label="start (required)"></v-text-field>
               <v-text-field v-model="end" type="date" label="end (required)"></v-text-field>
               <v-text-field v-model="color" type="color" label="color (click to open color menu)"></v-text-field>
+              <div class="mybtn-right"  style="text-align: right;">
               <v-btn type="submit" color="primary" class="mr-4" @click.stop="dialog = false">
                 create event
               </v-btn>
+              </div>
             </v-form>
           </v-container>
         </v-card>
@@ -100,7 +104,7 @@
   offset-x
   >
   <v-card color="grey lighten-4" :width="350" flat>
-    <v-toolbar :color="selectedEvent.color" dark>
+    <v-toolbar :color="selectedEvent.color">
       <v-btn @click="deleteEvent(selectedEvent.id)" icon>
         <v-icon>mdi-delete</v-icon>
       </v-btn>
@@ -109,7 +113,7 @@
     </v-toolbar>
 
     <v-card-text>
-      <form v-if="currentlyEditing !== selectedEvent.id">
+      <form class="grey--text" v-if="currentlyEditing !== selectedEvent.id">
         {{ selectedEvent.details }}
       </form>
       <form v-else>
@@ -124,13 +128,13 @@
   </v-card-text>
 
   <v-card-actions>
-    <v-btn text color="secondary" @click="selectedOpen = false">
-      close
+    <v-btn outlined text color="secondary" @click="selectedOpen = false">
+      Close
     </v-btn>
-    <v-btn v-if="currentlyEditing !== selectedEvent.id" text @click.prevent="editEvent(selectedEvent)">
-      edit
+    <v-btn color="secondary" v-if="currentlyEditing !== selectedEvent.id" text @click.prevent="editEvent(selectedEvent)">
+      Edit
     </v-btn>
-    <v-btn text v-else type="submit" @click.prevent="updateEvent(selectedEvent)">
+    <v-btn color="secondary" text v-else type="submit" @click.prevent="updateEvent(selectedEvent)">
       Save
     </v-btn>
   </v-card-actions>
@@ -158,7 +162,7 @@ export default {
     details: null,
     start: null,
     end: null,
-    color: '#1976D2', // default event color
+    color: '#079223', // default event color
     currentlyEditing: null,
     selectedEvent: {},
     selectedElement: null,
