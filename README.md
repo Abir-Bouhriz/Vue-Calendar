@@ -11,7 +11,7 @@ This is my second challenge (One week challenge), In this project I hooked up a 
 <img src="screenshots/1.png" />
 
 ## Challenges:
-* [Day 1: Jrt-Spectre](https://github.com/Abir-Bouhriz/Spectre-Clone)
+* [Day 1: Jet-Spectre](https://github.com/Abir-Bouhriz/Spectre-Clone)
 * [Day 2: Vue-Calendar](https://github.com/Abir-Bouhriz/Vue-Calender)
 
 ## Tools & languages:
