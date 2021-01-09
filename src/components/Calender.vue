@@ -3,19 +3,21 @@
     <v-col>
       <v-sheet height="64">
         <v-toolbar flat color="white">
-          <v-btn color="primary" dark @click.stop="dialog = true">
-            New Event
-          </v-btn>
           <v-btn outlined class="mr-4" @click="setToday">
             Today
           </v-btn>
-          <v-btn fab text small @click="prev">
+          <v-btn fab text small @click="prev" class="mr-4">
             <v-icon small>mdi-chevron-left</v-icon>
           </v-btn>
-          <v-btn fab text small @click="next" class="mr-4">
+          <v-toolbar-title>{{ title }}</v-toolbar-title>
+          <v-btn fab text small @click="next" class="ml-4">
             <v-icon small>mdi-chevron-right</v-icon>
           </v-btn>
-          <v-toolbar-title>{{ title }}</v-toolbar-title>
+    <v-spacer></v-spacer>
+          <v-btn outlined color="primary"  @click.stop="dialog = true">
+            New Event
+          </v-btn>
+          
           <div class="flex-grow-1"></div>
           <v-menu bottom right>
             <template v-slot:activator="{ on }">
@@ -76,7 +78,7 @@
         </v-card>
       </v-dialog>
 
-<v-sheet height="600">
+<v-sheet height="600" class="mt-4">
   <v-calendar
   ref="calendar"
   v-model="focus"
