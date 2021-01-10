@@ -4,7 +4,7 @@
 ![Jetlight studio](https://img.shields.io/badge/Made%20by-Jetlight%20studio-blue.svg?color=082544)
 
 ## Description:
-This is my second challenge (One week challenge), In this project I hooked up a Firebase Firestore to a custom Vue.js application using the [Vuetify Calendar](https://vuetifyjs.com/en/components/calendars/) component.
+This is my second challenge (One week challenge), In this project I hooked up a Firebase Firestore to a custom Vue.js application using the [Vuetify Calendar component](https://vuetifyjs.com/en/components/calendars/).
 
 ## ScreenShots:
 
@@ -47,6 +47,9 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## Contribution:
 Feel free to fork this project and add whatever you like. If you have any suggestions or any comments please feel free to contact me or to open an issue.
+
+## Special thanks:
+[Traversy Media](https://www.youtube.com/watch?v=2NOsjTT1b_k&t=214s).
 
 ## Team:
 [Jetlighters](https://github.com/JetLightStudio) having fun.
